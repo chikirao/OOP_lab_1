@@ -168,7 +168,6 @@ namespace VendingMachine
 
       // Подсчет сдачи
       int changeCalc = InsertedRubles - product.Price;
-      Dictionary<int, int>? changeToGive = null; // ? = nullable
       if (changeCalc > 0)
       {
         var changeToGive = MakeChange(changeCalc);
