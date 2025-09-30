@@ -214,7 +214,7 @@ namespace VendingMachine
         Console.WriteLine(" 2. - Пополнить остаток товара.");
         Console.WriteLine(" 3. - Создать новый товар.");
         Console.WriteLine(" 4. - Собрать выручку.");
-        Console.WriteLine(" 0. - Выйти в режим покупателя.\n");
+        Console.WriteLine(" 0. - Выйти в режим покупателя.");
 
         Console.Write("ВВОД: ");
         var command = Console.ReadLine();
