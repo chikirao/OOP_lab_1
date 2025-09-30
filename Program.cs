@@ -171,20 +171,11 @@ namespace VendingMachine
       Dictionary<int, int>? changeToGive = null; // ? = nullable
       if (changeCalc > 0)
       {
-        changeToGive = MakeChange(changeCalc);
-      }
+        var changeToGive = MakeChange(changeCalc);
 
-      if (changeCalc > 0)
-      {
         Console.WriteLine($"Сдача: {FormatRub(changeCalc)}.");
         Console.WriteLine("Состав сдачи:");
 
-        // Логика для вывода монет
-        if (changeToGive == null)
-        {
-          Console.WriteLine("  Ошибка!!!\nНе получилось посчитать сдачу. changeToGive = null.");
-          return false;
-        }
         foreach (var coin in AllowedDenominations)
         {
           if (changeToGive.TryGetValue(coin, out var cnt) && cnt > 0)
